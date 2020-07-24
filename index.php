@@ -9,10 +9,10 @@
 
 
 	<?php 
-
+	
 		//1
 
-		echo "<strong>Task 1</strong>";
+		echo "<p><strong>Task 1</strong></p>";
 
 		$a = 10;
 
@@ -589,7 +589,27 @@
 
 		//38
 
-		echo "<hr/><p><strong>Task 38</strong></p>";
+		echo "<hr/><p><strong>Task 38</strong></p>";	
+
+		$arr = array();
+
+		for($i = 0; ; $i++) {
+			if (array_sum(array_slice($arr, 0, $i)) > 80) break;
+				for($j = 10; ; $j *= 1.01) {
+					if ($j > 80) break;
+					array_push($arr, round($j, 2));
+				}
+		}
+			$arr7 = array_sum(array_slice($arr, 0, 7));
+			$arrN = array_sum(array_slice($arr, 0, 21));
+			echo 'Пробег лыжника за второй день составил: ' . $arr[1] . ' км.' . '<br />';
+			echo 'Пробег лыжника за третий день составил: ' . $arr[2] . ' км.' . '<br />';
+			echo 'Пробег лыжника за десятый день составил: ' . $arr[9] . ' км.' . '<br />';
+			echo 'Пробег лыжника за семь дней составил: ' . $arr7 . ' км.' . '<br />';
+			echo 'Пробег лыжника за двадцать один день составил: ' . $arrN . ' км.' . '<br />';
+			echo 'На ' . ($i - 1) . ' день лыжнику стоит прекратить пробег.';
+
+
 
 		// $arr = array();
 
@@ -610,27 +630,7 @@
 		// }
 
 		// echo 'На ' . ($i - 1) . ' день лыжнику стоит прекратить пробег.';
-
-
-
-		$arr = array();
-
-		for($i = 0; ; $i++) {
-			if (array_sum(array_slice($arr, 0, $i)) > 80) break;
-				for($j = 10; ; $j *= 1.01) {
-					if ($j > 80) break;
-					array_push($arr, round($j, 2));
-				}
-		}
-			$arr7 = array_sum(array_slice($arr, 0, 7));
-			$arrN = array_sum(array_slice($arr, 0, 21));
-			echo 'Пробег лыжника за второй день составил: ' . $arr[1] . ' км.' . '<br />';
-			echo 'Пробег лыжника за третий день составил: ' . $arr[2] . ' км.' . '<br />';
-			echo 'Пробег лыжника за десятый день составил: ' . $arr[9] . ' км.' . '<br />';
-			echo 'Пробег лыжника за семь дней составил: ' . $arr7 . ' км.' . '<br />';
-			echo 'Пробег лыжника за двадцать один день составил: ' . $arrN . ' км.' . '<br />';
-			echo 'На ' . ($i - 1) . ' день лыжнику стоит прекратить пробег.';
-		
+	
 	?>
 </body>
 </html>
